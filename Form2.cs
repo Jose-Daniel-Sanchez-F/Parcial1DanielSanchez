@@ -83,6 +83,12 @@ namespace Parcial1DanielSanchez
 
         private void buttonOrdenar_Click(object sender, EventArgs e)
         {
+            mostrarGo = mostrarGo.OrderByDescending(p => p.goles).ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = mostrarGo;
+            dataGridView1.Refresh();
 
         }
     }
