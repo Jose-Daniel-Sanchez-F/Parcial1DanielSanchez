@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonOrdenar = new System.Windows.Forms.Button();
             this.buttonPromedio = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +73,23 @@
             this.buttonPromedio.TabIndex = 3;
             this.buttonPromedio.Text = "PROMEDIO";
             this.buttonPromedio.UseVisualStyleBackColor = true;
+            this.buttonPromedio.Click += new System.EventHandler(this.buttonPromedio_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(707, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "---";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonPromedio);
             this.Controls.Add(this.buttonOrdenar);
             this.Controls.Add(this.button1);
@@ -87,6 +99,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -96,5 +109,6 @@
         private Button button1;
         private Button buttonOrdenar;
         private Button buttonPromedio;
+        private Label label1;
     }
 }

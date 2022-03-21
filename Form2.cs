@@ -13,8 +13,11 @@ namespace Parcial1DanielSanchez
     public partial class Form2 : Form
     {
         List<Mostrar> mostrarGo = new List<Mostrar>();
+        List<Mostrar> mostrarGo1 = new List<Mostrar>();
         List<Goles> gol = new List<Goles>();
         List<Jugadores> juga = new List<Jugadores>();
+
+        List<Mostrar> mostrarGo2 = new List<Mostrar>();
         public Form2()
         {
             InitializeComponent();
@@ -83,13 +86,18 @@ namespace Parcial1DanielSanchez
 
         private void buttonOrdenar_Click(object sender, EventArgs e)
         {
-            mostrarGo = mostrarGo.OrderByDescending(p => p.goles).ToList();
+            mostrarGo1 = mostrarGo.OrderByDescending(p => p.goles).ToList();
 
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();
-            dataGridView1.DataSource = mostrarGo;
+            dataGridView1.DataSource = mostrarGo1;
             dataGridView1.Refresh();
 
+        }
+
+        private void buttonPromedio_Click(object sender, EventArgs e)
+        {
+            label1.Text = mostrarGo.Average(a => a.goles).ToString();
         }
     }
 }
