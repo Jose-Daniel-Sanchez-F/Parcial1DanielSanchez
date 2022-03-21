@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.textBoxEquipo = new System.Windows.Forms.TextBox();
-            this.comboBoxJugadores = new System.Windows.Forms.ComboBox();
+            this.comboBoxJugador = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBoxGoles = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxEquipo
@@ -45,13 +46,13 @@
             this.textBoxEquipo.Size = new System.Drawing.Size(213, 23);
             this.textBoxEquipo.TabIndex = 0;
             // 
-            // comboBoxJugadores
+            // comboBoxJugador
             // 
-            this.comboBoxJugadores.FormattingEnabled = true;
-            this.comboBoxJugadores.Location = new System.Drawing.Point(662, 257);
-            this.comboBoxJugadores.Name = "comboBoxJugadores";
-            this.comboBoxJugadores.Size = new System.Drawing.Size(213, 23);
-            this.comboBoxJugadores.TabIndex = 1;
+            this.comboBoxJugador.FormattingEnabled = true;
+            this.comboBoxJugador.Location = new System.Drawing.Point(662, 257);
+            this.comboBoxJugador.Name = "comboBoxJugador";
+            this.comboBoxJugador.Size = new System.Drawing.Size(213, 23);
+            this.comboBoxJugador.TabIndex = 1;
             // 
             // label1
             // 
@@ -59,9 +60,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(518, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
+            this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "No. del jugador: ";
+            this.label1.Text = "Jugador: ";
             // 
             // dateTimePicker1
             // 
@@ -107,22 +108,34 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "No. de goles anotados:";
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Location = new System.Drawing.Point(695, 427);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(134, 42);
+            this.buttonGuardar.TabIndex = 8;
+            this.buttonGuardar.Text = "Guardar ";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Parcial1DanielSanchez.Properties.Resources.partidos;
             this.ClientSize = new System.Drawing.Size(1031, 530);
+            this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxGoles);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxJugadores);
+            this.Controls.Add(this.comboBoxJugador);
             this.Controls.Add(this.textBoxEquipo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +144,13 @@
         #endregion
 
         private TextBox textBoxEquipo;
-        private ComboBox comboBoxJugadores;
+        private ComboBox comboBoxJugador;
         private Label label1;
         private DateTimePicker dateTimePicker1;
         private TextBox textBoxGoles;
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button buttonGuardar;
     }
 }
