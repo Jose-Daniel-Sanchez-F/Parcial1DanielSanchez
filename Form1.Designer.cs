@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
+            this.buttonRegistros = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxEquipo
@@ -118,12 +119,23 @@
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
+            // buttonRegistros
+            // 
+            this.buttonRegistros.Location = new System.Drawing.Point(695, 476);
+            this.buttonRegistros.Name = "buttonRegistros";
+            this.buttonRegistros.Size = new System.Drawing.Size(134, 42);
+            this.buttonRegistros.TabIndex = 9;
+            this.buttonRegistros.Text = "Ver Registros";
+            this.buttonRegistros.UseVisualStyleBackColor = true;
+            this.buttonRegistros.Click += new System.EventHandler(this.buttonRegistros_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Parcial1DanielSanchez.Properties.Resources.partidos;
             this.ClientSize = new System.Drawing.Size(1031, 530);
+            this.Controls.Add(this.buttonRegistros);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -152,5 +164,6 @@
         private Label label3;
         private Label label4;
         private Button buttonGuardar;
+        private Button buttonRegistros;
     }
 }
